@@ -1,12 +1,12 @@
-import * as fs from "fs";
+import * as fs from 'fs';
 
-const inputFile = "input.dat";
-const input = fs.readFileSync(inputFile, "utf8").trim().split("\n");
+const inputFile = 'input.dat';
+const input = fs.readFileSync(inputFile, 'utf8').trim().split('\n');
 
 const lines: string[] = input;
 
 const correctionRule: string = lines[0];
-let correctionRuleReverse: string = "";
+let correctionRuleReverse: string = '';
 const textToCorrect: string = lines[1];
 const correctionMap: string[] = [];
 
@@ -32,5 +32,5 @@ for (let l = 0; l < textToCorrect.length; l++) {
   }
 }
 
-const result = correctionMap.join("");
+const result = correctionMap.join('');
 console.log(result);
